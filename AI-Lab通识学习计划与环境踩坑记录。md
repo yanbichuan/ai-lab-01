@@ -1,0 +1,32 @@
+#AI-Lab通识学习计划与环境踩坑记录
+ task2 Markdown笔记
+ 所用编辑器：Trae
+
+ ##学习计划
+  || 任务 | 预估时间 | 需要学会什么 |
+| ---- | ---- | ---- |
+| Task01 | 2天 | 下载并登录Trae、OpenCode、DeepSeek |
+| Task02 | 2天 | 学会markdown写笔记 |
+
+##环境配置
+我用Trae写Markdown笔记，方便检查出我的笔记和内容是否OK
+
+##踩坑记录
+1.一个#和两个##没分清
+2.中英文键盘格式没分清
+3.使用trae时没有下载python环境，导致无法写代码和使用markdown写笔记
+4.用python时打的printf,出错
+5.运行代码时文件夹没加.py后缀，导致无法运行
+6.写表格时，|没有对齐，导致表格格式错误
+
+## 代码实验
+成功运行了一个简单python代码
+```python
+print("hello markdown")
+
+学习并运行了一个公式小例子：
+$$
+E=mc^2
+$$
+
+参考链接：Markdown 基础语法
