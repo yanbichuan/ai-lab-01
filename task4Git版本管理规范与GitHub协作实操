@@ -1,0 +1,261 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\南川\Desktop\新建文件夹> git --version
+git version 2.56.0.windows.2
+PS C:\Users\南川\Desktop\新建文件夹> git config --global user.name "yanbichuan"
+PS C:\Users\南川\Desktop\新建文件夹> git config --global user.email "nanchuan_294573@qq.com"
+PS C:\Users\南川\Desktop\新建文件夹> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+safe.directory=*
+user.name=yanbichuan
+user.email=nanchuan_294573@qq.com
+PS C:\Users\南川\Desktop\新建文件夹> ssh-keygen -t ed25519 -C "nanchuan_294573@qq.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (C:\Users\南川/.ssh/id_ed25519):
+Created directory 'C:\\Users\\\345\215\227\345\267\235/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\南川/.ssh/id_ed25519
+Your public key has been saved in C:\Users\南川/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:XT7eTa8S7o1O4Ug6K3cEXs56qPOAoaSMfQgwr9CqTfc nanchuan_294573@qq.com
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|                 |
+|o           .    |
+|.+      ...o     |
+|o + .  .S=o +   .|
+|+B o o  .o++.+ o.|
+|=.= + . o+..+.. o|
+|.o o .o.+oo.oo . |
+|. .   E*oo o+.o  |
++----[SHA256]-----+
+PS C:\Users\南川\Desktop\新建文件夹> cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICN48Zp62SrLlEto7RiRxCZKiE51V2tWDJrLiETXuWXq nanchuan_294573@qq.com
+PS C:\Users\南川\Desktop\新建文件夹>
+PS C:\Users\南川\Desktop\新建文件夹> mkdir git-homework
+
+
+    目录: C:\Users\南川\Desktop\新建文件夹
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2026/10/17     10:10                git-homework
+
+
+PS C:\Users\南川\Desktop\新建文件夹> cd git-homework
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo"# 作业仓库">readme.md
+echo# 作业仓库>readme.md : 无法将“echo# 作业仓库>readme.md”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查
+名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ echo"# 作业仓库">readme.md
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (echo# 作业仓库>readme.md:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo "# 作业仓库" > readme.md
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git init
+Initialized empty Git repository in C:/Users/南川/Desktop/新建文件夹/git-homework/.git/
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git add .
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git commit -m"docs:初始化项目 ”
+[master (root-commit) ba42ecf] docs:初始化项目
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo"Git任务4">>readme.md
+echoGit任务4>>readme.md : 无法将“echoGit任务4>>readme.md”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名
+称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ echo"Git任务4">>readme.md
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (echoGit任务4>>readme.md:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo "Git任务04" >> readme.md
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git commit -m"docs:添加任务标题"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git commit -m "docs: 添加任务标题"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> touch note.txt
+touch : 无法将“touch”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正
+确，然后再试一次。
+所在位置 行:1 字符: 1
++ touch note.txt
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> touch note.txt
+touch : 无法将“touch”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正
+确，然后再试一次。
+所在位置 行:1 字符: 1
++ touch note.txt
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> New-Item note.txt
+
+
+    目录: C:\Users\南川\Desktop\新建文件夹\git-homework
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2026/10/17     10:27              0 note.txt
+
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo"Git基础命令">note.txt
+echoGit基础命令>note.txt : 无法将“echoGit基础命令>note.txt”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查
+名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ echo"Git基础命令">note.txt
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (echoGit基础命令>note.txt:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo "git基础命令" > note.txt
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git commit  _m"feat:新建笔记文件"
+error: pathspec '_mfeat:新建笔记文件' did not match any file(s) known to git
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git checkout -b feature_test
+Switched to a new branch 'feature_test'
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo"分支开发内容">>note.txt
+echo分支开发内容>>note.txt : 无法将“echo分支开发内容>>note.txt”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请
+检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ echo"分支开发内容">>note.txt
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (echo分支开发内容>>note.txt:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo "分支开发内容" >> note.txt
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git commit _m"feat:分支添加内容"
+error: pathspec '_mfeat:分支添加内容' did not match any file(s) known to git
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git merge feature-test
+merge: feature-test - not something we can merge
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo"分支合并完成">>readme.md
+echo分支合并完成>>readme.md : 无法将“echo分支合并完成>>readme.md”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。
+请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ echo"分支合并完成">>readme.md
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (echo分支合并完成>>readme.md:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> echo "分支合并完成" >> readme.md
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git commit -m"docs:完成分支合并"
+On branch feature_test
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        note.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> git log --oneline --graph
+* ba42ecf (HEAD -> feature_test, master) docs:初始化项目
+PS C:\Users\南川\Desktop\新建文件夹\git-homework> Get-History
+
+  Id CommandLine
+  -- -----------
+   1 git --version
+   2 git config --global user.name "yanbichuan"
+   3 git config --global user.email "nanchuan_294573@qq.com"
+   4 git config --list
+   5 ssh-keygen -t ed25519 -C "nanchuan_294573@qq.com"
+   6 cat ~/.ssh/id_ed25519.pub
+   7 mkdir git-homework
+   8 cd git-homework
+   9 echo"# 作业仓库">readme.md
+  10 echo "# 作业仓库" > readme.md
+  11 git init
+  12 git add
+  13 git add .
+  14 git commit -m"docs:初始化项目 ”
+  15 echo"Git任务4">>readme.md
+  16 echo "Git任务04" >> readme.md
+  17 git add.
+  18 git commit -m"docs:添加任务标题"
+  19 git commit -m "docs: 添加任务标题"
+  20 touch note.txt
+  21 touch note.txt
+  22 New-Item note.txt
+  23 echo"Git基础命令">note.txt
+  24 echo "git基础命令" > note.txt
+  25 git add
+  26 git add.
+  27 git commit  _m"feat:新建笔记文件"
+  28 git checkout -b feature_test
+  29 echo"分支开发内容">>note.txt
+  30 echo "分支开发内容" >> note.txt
+  31 git add.
+  32 git commit _m"feat:分支添加内容"
+  33 git checkout main
+  34 git merge feature-test
+  35 echo"分支合并完成">>readme.md
+  36 echo "分支合并完成" >> readme.md
+  37 git add.
+  38 git commit -m"docs:完成分支合并"
+  39 git log --oneline --graph
+
+
+PS C:\Users\南川\Desktop\新建文件夹\git-homework>
