@@ -1,0 +1,39 @@
+numpy==2.0.2
+
+1. 我一开始尝试使用 Anaconda 创建虚拟环境，但是多次报错，弄了好久，删除文档不行，全部重新安装也不行，始终无法正常安装，于是我又换了一个
+
+
+2. 于是我改用 Python 内置 venv 创建虚拟环境：
+命令：`python -m venv py310`
+结果：没有报错，于是我进行下一步--生成 py310 文件夹
+3. 激活虚拟环境：
+命令：`py310\Scripts\activate`
+结果：我发现命令行前缀出现`(py310)`，说明激活成功
+4. 清华镜像安装 numpy：
+命令：`pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple`
+结果：安装成功
+5. 继续查看已安装包：
+命令：`pip list`
+结果：安装包里面有 numpy、pip、setuptools
+6. 导出文件：
+命令：`pip freeze > requirements.txt`
+结果：生成 requirements.txt，内容：`numpy==2.0.2`
+
+
+
+
+7. 验证库：
+
+```
+python
+>>> import numpy
+>>> print(numpy.__version__)
+>>> exit()
+```
+
+结果：我看到输出版本`2.0.2`，说明numpy 可用
+8. 退出虚拟环境：
+命令：`deactivate`
+结果：`(py310)`标识消失，说明虚拟环境退出，完成
+
+
